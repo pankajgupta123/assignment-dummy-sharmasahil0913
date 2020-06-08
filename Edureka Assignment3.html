@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>
+            This is page of Javascript.
+        </title>
+        
+    </head>
+    <body>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+
+        
+         <script>
+           let Restaurant_detail=["Punjabi Hotel","Gandhinagar","Varanasi"];
+           let Restaurant_detail2=["KFC","Vasant Kunj","Kanpur"];
+           let Restaurant_detail3=["Chinese Hotel","Lal Chowk","Delhi"];
+           let Restaurant_detail4=["South indian Hotel","Lal Chowk","Delhi"];
+           
+           
+
+           document.getElementById("demo").innerHTML= "Restaurant_Name: "+Restaurant_detail[0]+"Restaurant_Address: "+Restaurant_detail[1]+"Restaurant_City: "+Restaurant_detail[2];
+
+           
+           document.getElementById("demo1").innerHTML= "Restaurant_Name: "+Restaurant_detail2[0]+"Restaurant_Address: "+Restaurant_detail2[1]+"Restaurant_City: "+Restaurant_detail2[2];
+
+
+           document.getElementById("demo2").innerHTML= "Restaurant_Name: "+Restaurant_detail3[0]+"Restaurant_Address: "+Restaurant_detail3[1]+"Restaurant_City: "+Restaurant_detail3[2];
+            
+
+           document.getElementById("demo3").innerHTML= "Restaurant_Name: "+Restaurant_detail4[0]+"Restaurant_Address: "+Restaurant_detail4[1]+"Restaurant_City: "+Restaurant_detail4[2];
+
+       
+
+
+
+           let Restaurant_list=
+           {
+               Restaurant_Name1:"New Boston Restaurant",
+               Restaurant_Name2:"Madhuvan Restaurant",
+               Restaurant_Name3:"Beetle House Restaurant",
+               Restaurant_Name4:"Taj Restaurant",
+               Restaurant_Name5:"New Weston Restaurant",
+               Restaurant_Name: function()
+               {
+                   return this.Restaurant_Name1 +"    "+ this.Restaurant_Name2 +"    "+this.Restaurant_Name3 +"    "+this.Restaurant_Name4+"     "+this.Restaurant_Name5; 
+               }
+           };
+           console.log(Restaurant_list.Restaurant_Name());
+
+
+
+
+
+
+
+           var city = {
+  city_value: function() {
+    return this.city1 + "     " + this.city2+"   "+this.city3 +"  "+this.city4;
+  }
+}
+var city_list = {
+  city1:"Varanasi",
+  city2: "Kanpur",
+  city3:"Delhi",
+  city4:"Mumbai"
+}
+x = city.city_value.call(city_list);
+document.getElementById("demo4").innerHTML = x;
+console.log(x);
+
+        </script>
+
+ </body>
+        
+       
+     
+    </body>
+</html>
